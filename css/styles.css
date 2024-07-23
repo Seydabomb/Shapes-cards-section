@@ -1,4 +1,18 @@
 /* ================ General ================ */
+
+.card {
+	height: 25em;
+}
+
+.card .card-content {
+	padding-left: 1em;
+}
+
+.card .card-content-center {
+	justify-content: center;
+	align-items: center;
+}
+
 img {
 	width: 100%;
 }
@@ -9,11 +23,57 @@ img {
 	display: block;
 }
 
+h1 {
+	margin-top: 0.5em;
+}
+
+h2 {
+	font-size: 1.25em;
+	text-align: center;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+}
+
+.social-icons .social-icon {
+	display: inline-flex;
+	height: 2rem;
+	width: 2rem;
+	border: solid 1px;
+	border-radius: 100%;
+	font-size: 1rem;
+	margin-right: 1.5rem;
+}
+
 /* ================ Card 1 - Savannah ================ */
+
+.savannah-background {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+}
+
+.pfp_savannah {
+	position: absolute; /* Allows for precise positioning within the card */
+	top: 55%; /* Centers the profile picture vertically */
+	left: 25%; /* Centers the profile picture horizontally */
+	transform: translate(-50%, -80%); /* Offsets the profile picture to truly center it */
+	border-radius: 60%; /* Makes the image circular */
+	border: 0.15em solid #fff; /* Border around pfp */
+	width: 5em;
+}
+
 .card1 {
 	padding: 1em;
 	text-align: center;
 	color: white;
+	align-items: center;
+	justify-content: center;
+}
+
+.card1 h1 {
+	font-size: 2em;
+	margin-top: 0;
 }
 
 .card-content {
@@ -21,17 +81,10 @@ img {
 }
 
 .social-icons1 .social-icon {
-	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	height: 3.5rem;
-	width: 3.5rem;
 	color: #fff;
-	border: solid;
 	border-color: white;
-	border-radius: 100%;
-	font-size: 1.5rem;
-	margin-right: 1.5rem;
 }
 
 .social-icons1 .social-icon:last-child {
@@ -44,32 +97,33 @@ img {
 
 /* ================ Card 2 - Landon ================ */
 
+.landon-background {
+	width: 100%; /* Ensures the background image covers the card */
+	height: auto;
+	display: block;
+	background: linear-gradient(-45deg, transparent 15px, #7fffd4 0);
+}
+
 .pfp_landon {
 	position: absolute; /* Allows for precise positioning within the card */
 	top: 55%; /* Centers the profile picture vertically */
 	left: 25%; /* Centers the profile picture horizontally */
 	transform: translate(-50%, -80%); /* Offsets the profile picture to truly center it */
 	border-radius: 60%; /* Makes the image circular */
-	border: 0.25em solid #fff; /* Border around pfp */
+	border: 0.15em solid #fff; /* Border around pfp */
 	width: 5em;
 }
 
 .card2 h1 {
 	color: green;
+	font-size: 1.5em;
 }
 
 .social-icons2 .social-icon {
-	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	height: 3.5rem;
-	width: 3.5rem;
 	color: green;
-	border: solid;
 	border-color: green;
-	border-radius: 100%;
-	font-size: 1.5rem;
-	margin-right: 1.5rem;
 }
 
 .social-icons2 .social-icon:last-child {
@@ -84,20 +138,14 @@ img {
 
 .card3 h1 {
 	color: black;
+	font-size: 2em;
 }
 
 .social-icons3 .social-icon {
-	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	height: 3.5rem;
-	width: 3.5rem;
 	color: black;
-	border: solid;
 	border-color: black;
-	border-radius: 100%;
-	font-size: 1.5rem;
-	margin-right: 1.5rem;
 }
 
 .social-icons3 .social-icon:last-child {
@@ -119,6 +167,7 @@ img {
 
 .card4 h1 {
 	color: hotpink;
+	font-size: 1.5em;
 }
 
 .pfp_gall,
@@ -128,21 +177,14 @@ img {
 	left: 50%; /* Centers the profile picture horizontally */
 	transform: translate(-50%, -50%); /* Offsets the profile picture to truly center it */
 	border-radius: 50%; /* Makes the image circular */
-	border: 0.25em solid #fff; /* Border around pfp */
+	border: 0.15em solid #fff; /* Border around pfp */
 }
 
 .social-icons4 .social-icon {
-	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	height: 3.5rem;
-	width: 3.5rem;
 	color: hotpink;
-	border: solid;
 	border-color: hotpink;
-	border-radius: 100%;
-	font-size: 1.5rem;
-	margin-right: 1.5rem;
 }
 
 .social-icons4 .social-icon:last-child {
@@ -160,8 +202,10 @@ img {
 }
 
 /* ================ Card 5 - Florence ================ */
+
 .card5 h1 {
 	color: darkgreen;
+	font-size: 1.5em;
 }
 
 button {
@@ -170,7 +214,11 @@ button {
 	background-color: darkgreen;
 	font-size: 0.8em;
 	color: white;
-	margin-top: 1em;
-	margin-bottom: 0.75em;
+	margin-top: 0.1em;
+	margin-bottom: 0.2em;
 	padding: 0.5em 1em;
+}
+
+.floating-card-background {
+	float: top;
 }
