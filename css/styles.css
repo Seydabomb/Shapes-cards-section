@@ -9,26 +9,25 @@
 }
 
 .card .card-content-center {
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
+	position: relative; /* Ensuring the text is above the background image */
+	z-index: 1;
 }
 
 img {
 	width: 100%;
 }
 
-.card-background {
-	width: 100%; /* Ensures the background image covers the card */
-	height: auto; /* Maintains aspect ratio */
-	display: block;
-}
-
 h1 {
-	margin-top: 0.5em;
+	margin-top: 2em;
 }
 
 h2 {
-	font-size: 1.25em;
+	font-size: 1em;
 	text-align: center;
 	margin-top: 0.5em;
 	margin-bottom: 1em;
@@ -44,23 +43,42 @@ h2 {
 	margin-right: 1.5rem;
 }
 
+.social-icons .social-icon:hover {
+	background-color: lightskyblue;
+	color: white;
+	border-color: black;
+}
+
 /* ================ Card 1 - Savannah ================ */
+.blur-container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-shadow: none;
+	z-index: 0; /* Placing the container below the card content */
+	filter: blur(5px); /* Applying blur to the container */
+}
 
 .savannah-background {
 	width: 100%;
 	height: 100%;
 	display: block;
-	position: absolute;
 }
 
-.pfp_savannah {
-	position: absolute; /* Allows for precise positioning within the card */
-	top: 55%; /* Centers the profile picture vertically */
-	left: 25%; /* Centers the profile picture horizontally */
-	transform: translate(-50%, -80%); /* Offsets the profile picture to truly center it */
-	border-radius: 60%; /* Makes the image circular */
+.pfp_savannah,
+.pfp_justin {
+	position: absolute;
+	top: 30%; /* Centering the profile picture vertically */
+	left: 50%; /* Centering the profile picture horizontally */
+	transform: translate(
+		-50%,
+		-50%
+	); /* Offsetting the profile picture to truly center it */
+	border-radius: 50%; /* Making the image circular */
 	border: 0.15em solid #fff; /* Border around pfp */
-	width: 5em;
+	width: 6em;
 }
 
 .card1 {
@@ -72,12 +90,7 @@ h2 {
 }
 
 .card1 h1 {
-	font-size: 2em;
-	margin-top: 0;
-}
-
-.card-content {
-	position: relative; /* Ensures text is above the background image */
+	font-size: 1.8em;
 }
 
 .social-icons1 .social-icon {
@@ -91,54 +104,58 @@ h2 {
 	margin-right: 0;
 }
 
-.social-icons1 .social-icon:hover {
-	background-color: #7fffd4;
-}
-
 /* ================ Card 2 - Landon ================ */
 
-.landon-background {
-	width: 100%; /* Ensures the background image covers the card */
-	height: auto;
+.landon-background,
+.gall-background {
+	width: 100%; /* Ensuring the background image covers the card */
+	height: 33%;
 	display: block;
-	background: linear-gradient(-45deg, transparent 15px, #7fffd4 0);
 }
 
 .pfp_landon {
-	position: absolute; /* Allows for precise positioning within the card */
-	top: 55%; /* Centers the profile picture vertically */
-	left: 25%; /* Centers the profile picture horizontally */
-	transform: translate(-50%, -80%); /* Offsets the profile picture to truly center it */
-	border-radius: 60%; /* Makes the image circular */
-	border: 0.15em solid #fff; /* Border around pfp */
-	width: 5em;
+	position: absolute;
+	top: 38%;
+	left: 10%;
+	transform: translate(-50%, -80%);
+	border-radius: 50%;
+	border: 0.15em solid #fff;
+	width: 4em;
 }
 
 .card2 h1 {
-	color: green;
-	font-size: 1.5em;
+	color: #6ab04c;
+	font-size: 1.2em;
 }
 
 .social-icons2 .social-icon {
 	align-items: center;
 	justify-content: center;
-	color: green;
-	border-color: green;
+	color: #6ab04c;
+	border-color: #6ab04c;
 }
 
 .social-icons2 .social-icon:last-child {
 	margin-right: 0;
 }
 
-.social-icons2 .social-icon:hover {
-	background-color: #7fffd4;
+/* ================ Card 3 - Justin ================ */
+
+.justin-background {
+	width: 100%;
+	height: 43%;
+	clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
+	/* top-left corner vertex (0 0), then top-right corner vertex (100% 0), then to the top right edge 40% down from the top (100% 40%), then to all the way to the bottom left corner(0 100%)*/
 }
 
-/* ================ Card 3 - Justin ================ */
+.card3 {
+	background-color: rgb(241, 241, 241);
+}
 
 .card3 h1 {
 	color: black;
-	font-size: 2em;
+	font-size: 1.8em;
+	margin-top: 1em;
 }
 
 .social-icons3 .social-icon {
@@ -152,60 +169,81 @@ h2 {
 	margin-right: 0;
 }
 
-.social-icons3 .social-icon:hover {
-	background-color: #7fffd4;
-}
-
 /* ================ Card 4 - Gall ================ */
 
 .card2,
 .card3,
 .card4 {
-	position: relative; /* Makes the card the reference for absolute positioning */
-	overflow: hidden; /* Ensures child elements don’t overflow outside the card */
+	position: relative; /* Making the card the reference for absolute positioning */
+	overflow: hidden; /* Ensuring child elements don’t overflow outside the card */
 }
 
 .card4 h1 {
-	color: hotpink;
-	font-size: 1.5em;
+	color: #f6787c;
+	font-size: 1.3em;
+	margin-top: 2.6em;
 }
 
-.pfp_gall,
-.pfp_justin {
-	position: absolute; /* Allows for precise positioning within the card */
-	top: 50%; /* Centers the profile picture vertically */
-	left: 50%; /* Centers the profile picture horizontally */
-	transform: translate(-50%, -50%); /* Offsets the profile picture to truly center it */
-	border-radius: 50%; /* Makes the image circular */
-	border: 0.15em solid #fff; /* Border around pfp */
+.card4:hover {
+	background-color: #f6787c;
+	color: white;
+}
+
+.card4:hover h1 {
+	color: white;
+}
+
+.card4:hover .social-icons4 .social-icon {
+	color: white !important;
+	border-color: white !important;
+}
+
+.pfp_gall {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	border: 0.15em solid #fff;
+	width: 6em;
+	height: 6em;
 }
 
 .social-icons4 .social-icon {
 	align-items: center;
 	justify-content: center;
-	color: hotpink;
-	border-color: hotpink;
+	color: #f6787c;
+	border-color: #f6787c;
 }
 
 .social-icons4 .social-icon:last-child {
 	margin-right: 0;
 }
 
-.social-icons4 .social-icon:hover {
-	background-color: #7fffd4;
-}
-
-.pfp_gall {
-	width: 8em;
-	height: 8em;
-	border-radius: 100px;
-}
-
 /* ================ Card 5 - Florence ================ */
+
+.floating-background {
+	position: absolute;
+	top: -1em;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	z-index: 1; /* Ensuring it is above the card */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Shading behind the image */
+	border-radius: 0.5em; /* Rounding the corners */
+}
+
+.florence-background {
+	align-self: center;
+	width: 94%;
+	height: 65%;
+	display: block;
+}
 
 .card5 h1 {
 	color: darkgreen;
-	font-size: 1.5em;
+	font-size: 1.3em;
+	margin-top: 12em;
 }
 
 button {
@@ -217,8 +255,4 @@ button {
 	margin-top: 0.1em;
 	margin-bottom: 0.2em;
 	padding: 0.5em 1em;
-}
-
-.floating-card-background {
-	float: top;
 }
