@@ -2,7 +2,7 @@
 
 .card {
 	height: 25em;
-	/* width: 22em;*/
+	width: 23em;
 }
 
 .card .card-content {
@@ -250,7 +250,7 @@ h2 {
 .card5 h1 {
 	color: darkgreen;
 	font-size: 1.3em;
-	margin-top: 11.3em;
+	margin-top: 11.8em;
 }
 
 button {
