@@ -1,8 +1,26 @@
 /* ================ General ================ */
 
+.container {
+	padding: 2em;
+}
+
+.card-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.col-md-4,
+.col-md-6 {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Center card and h2 horizontally */
+}
+
 .card {
 	height: 25em;
 	width: 23em;
+	margin-bottom: 1em;
 }
 
 .card .card-content {
@@ -15,7 +33,7 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	position: relative; /* Ensuring the text is above the background image */
+	position: relative;
 	z-index: 1;
 	margin: 0.5em;
 }
@@ -30,7 +48,6 @@ h1 {
 
 h2 {
 	font-size: 1em;
-	text-align: center;
 	margin-top: 0.5em;
 	margin-bottom: 1em;
 }
