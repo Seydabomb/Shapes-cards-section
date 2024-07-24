@@ -2,6 +2,7 @@
 
 .card {
 	height: 25em;
+	width: 21em;
 }
 
 .card .card-content {
@@ -16,6 +17,7 @@
 	text-align: center;
 	position: relative; /* Ensuring the text is above the background image */
 	z-index: 1;
+	margin: 0.5em;
 }
 
 img {
@@ -30,7 +32,7 @@ h2 {
 	font-size: 1em;
 	text-align: center;
 	margin-top: 0.5em;
-	margin-bottom: 1em;
+	margin-bottom: 1.5em;
 }
 
 .social-icons .social-icon {
@@ -82,7 +84,6 @@ h2 {
 }
 
 .card1 {
-	padding: 1em;
 	text-align: center;
 	color: white;
 	align-items: center;
@@ -116,11 +117,16 @@ h2 {
 .pfp_landon {
 	position: absolute;
 	top: 38%;
-	left: 10%;
+	left: 15%;
 	transform: translate(-50%, -80%);
 	border-radius: 50%;
 	border: 0.15em solid #fff;
 	width: 4em;
+}
+
+.header-container {
+	display: flex;
+	margin-bottom: 0.5em;
 }
 
 .card2 h1 {
@@ -224,7 +230,7 @@ h2 {
 
 .floating-background {
 	position: absolute;
-	top: -1em;
+	top: -1.5em;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 90%;
@@ -243,7 +249,7 @@ h2 {
 .card5 h1 {
 	color: darkgreen;
 	font-size: 1.3em;
-	margin-top: 12em;
+	margin-top: 11.3em;
 }
 
 button {
@@ -252,7 +258,5 @@ button {
 	background-color: darkgreen;
 	font-size: 0.8em;
 	color: white;
-	margin-top: 0.1em;
-	margin-bottom: 0.2em;
 	padding: 0.5em 1em;
 }
