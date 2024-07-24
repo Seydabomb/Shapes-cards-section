@@ -2,7 +2,7 @@
 
 .card {
 	height: 25em;
-	width: 21em;
+	/* width: 22em;*/
 }
 
 .card .card-content {
@@ -32,7 +32,7 @@ h2 {
 	font-size: 1em;
 	text-align: center;
 	margin-top: 0.5em;
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 }
 
 .social-icons .social-icon {
@@ -84,6 +84,7 @@ h2 {
 }
 
 .card1 {
+	padding: 1em;
 	text-align: center;
 	color: white;
 	align-items: center;
@@ -230,7 +231,7 @@ h2 {
 
 .floating-background {
 	position: absolute;
-	top: -1.5em;
+	top: -1em;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 90%;
